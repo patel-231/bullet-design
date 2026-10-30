@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #090D14;
+    --bg-secondary: #0D1420;
+    --bg-card: #121C2A;
+    --border-subtle: rgba(255, 255, 255, 0.10);
+    --blue-deep: #123B70;
+    --blue-electric: #2465B5;
+    --blue-muted: #18304D;
+    --orange-vibrant: #FF7138;
+    --orange-deep: #E95B2B;
+    --gold-champagne: #D5AC57;
+    --gold-soft: #B99550;
+    --text-primary: #F5F5F2;
+    --text-secondary: #A5ADBA;
+    --text-muted: #697586;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.03em;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090D14;
+}
+::-webkit-scrollbar-thumb {
+  background: #18304D;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2465B5;
+}
+
+/* Editorial subtle grid pattern */
+.bg-grid-editorial {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.text-gradient-orange {
+  background: linear-gradient(135deg, #FF7138 0%, #E95B2B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, #2465B5 0%, #123B70 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
